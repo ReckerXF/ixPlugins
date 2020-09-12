@@ -1,7 +1,7 @@
 local PLUGIN = PLUGIN
 
 PLUGIN.name = "Containers Revamped"
-PLUGIN.author = "Blizzard"
+PLUGIN.author = "Chessnut, Blizzard"
 PLUGIN.description = "A big improvement to default containers plugin. Original credit to Chessnut."
 
 ix.container = ix.container or {}
