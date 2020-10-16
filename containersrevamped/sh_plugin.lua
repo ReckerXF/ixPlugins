@@ -203,7 +203,21 @@ else
 	net.Receive("ixContainerPassword", function(length)
 		local entity = net.ReadEntity()
 
-		Derma_StringRequest(
+		if (LocalPlayer():Team() == FACTION_STAFF) then
+			Derma_Query(
+				"You have override powers for passworded containers!",
+				"Access a Protected Container",
+				"Open",
+				function(val)
+					net.Start("ixContainerPassword")
+						net.WriteEntity(entity)
+						net.WriteString("password")
+					net.SendToServer()
+				end,
+				"Cancel"
+			)
+		else
+			Derma_StringRequest(
 			L("containerPasswordWrite"),
 			L("containerPasswordWrite"),
 			"",
@@ -213,7 +227,8 @@ else
 					net.WriteString(val)
 				net.SendToServer()
 			end
-		)
+			)
+		end
 	end)
 end
 
