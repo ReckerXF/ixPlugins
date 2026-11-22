@@ -8,5 +8,5 @@ function PLUGIN:PreCacheModels()
 		self.PrecachedCount = self.PrecachedCount + 1
 	end
 
-	MsgC( colPlugin, "[Preload Utils] All models pre-cached!" )
+	MsgC( colPlugin, "[Preload Utils] " .. self.PrecachedCount .. " models pre-cached!" )
 end
