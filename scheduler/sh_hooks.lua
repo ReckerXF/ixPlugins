@@ -5,7 +5,7 @@ function PLUGIN:OnTimeChanged( iHour, iMinute )
     local tSchedule = ix.scheduler.schedules[ sTime ]
 
     if tSchedule and tSchedule.onRun then
-        ix.schedule.current = tSchedule
+        ix.scheduler.current = tSchedule
         tSchedule.onRun()
 
         hook.Run( "OnScheduleChanged", tSchedule.name, sTime )
