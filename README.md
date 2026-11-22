@@ -7,7 +7,6 @@ Helix is a framework for roleplay gamemodes in [Garry's Mod](https://gmod.facepu
 ## Recker's Plugins
 Within this repository you'll find an assortment of plugins I've decided to publicly release. You may find a list below.
 
-------------
 #### 1. Scheduler
 Scheduler uses Helix's ix.date library to run scheduled events at specific times. Dates currently not supported.
 
@@ -25,6 +24,5 @@ hook.Add( "OnScheduleChanged", "TestHook.OnScheduleChange", function( sName, sTi
 end )
 ```
 
-------------
 #### 2. Preload Utils
 A plugin used to pre-cache models from all of the registered factions, classes, and items.
